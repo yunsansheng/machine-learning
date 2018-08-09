@@ -189,11 +189,11 @@ $\theta_j := \theta_j(1-\alpha \frac{\lambda}{m})- \alpha\frac{1}{m} \sum\limits
 
 Recall that our cost function for logistic regression was:
 
-$J(\theta) =- \frac{1}{m}\sum\limits ^m_{i=1}[y^{(i)}log(1-y^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]$
+J(\theta) =- \frac{1}{m}\sum\limits ^m_{i=1}[y^{(i)}log(h_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]
 
 we can regularize the equation by adding a term to the end:
 
-$J(\theta) =- \frac{1}{m}\sum\limits ^m_{i=1}[y^{(i)}log(1-y^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]+\frac{\lambda}{2m}\sum\limits^n_{j=1}\theta^2_j$
+J(\theta) =- \frac{1}{m}\sum\limits ^m_{i=1}[y^{(i)}log(h_\theta(x^{(i)}))+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]+\frac{\lambda}{2m}\sum\limits^n_{j=1}\theta^2_j
 
 - not include $\theta_0$
 
