@@ -84,7 +84,7 @@ NOR   ---|
 - AND OR NOR can only use a unit.
 - The layer both is 3layers
 
- ### $x_1$ and $x_2$
+**$x_1$ and $x_2$**
 
 $\begin{align*}\begin{bmatrix}x_0 \newline x_1 \newline x_2\end{bmatrix} \rightarrow\begin{bmatrix}g(z^{(2)})\end{bmatrix} \rightarrow h_\Theta(x)\end{align*}$
 

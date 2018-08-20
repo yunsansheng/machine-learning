@@ -1,24 +1,24 @@
-#introduction
+# Introduction
 
-## definition 
+## Definition 
 
 A computer program is said to learn from **experience E** with respect to some **task T** and some **performance measure P**, if its performance on T, as measured by P, improves with experience E.
 
-## machine learning algorithms:
+## Machine learning algorithms:
 
 - supervised learning
 - unsupervised learning
 - others
 	- Reinforcement learning(强化学习)
-	- recommender systems(推荐系统)
+	- Recommender systems(推荐系统)
 
-	### supervised learning 
-	- regression 
-		- linear regression with one variable
-			- cost function
-			- gradient descent
-				- batch gradient dscent
-	- classification
+### Supervised learning 
+- Regression 
+	- linear regression with one variable
+		- cost function
+		- gradient descent
+			- batch gradient dscent
+- classification
 	
 	In supervised learning, we are **given a data set** and already know what our **correct output should look like**, having the idea that there is a relationship between the input and the output.
 	
@@ -33,19 +33,19 @@ A computer program is said to learn from **experience E** with respect to some *
 		- Given a patient with a tumor, we have to predict whether the tumor is malignant or benign.(Classification)
 
 
-	### unsupervised learning 
-	Unsupervised learning allows us to approach problems with little or **no idea what our results should look like**. 
+### Unsupervised learning 
+Unsupervised learning allows us to approach problems with little or **no idea what our results should look like**. 
 	
-	We can derive structure from data where we don't necessarily know the effect of the variables.We can derive this structure by clustering the data based on relationships among the variables in the data.
+We can derive structure from data where we don't necessarily know the effect of the variables.We can derive this structure by clustering the data based on relationships among the variables in the data.
 	
-	With unsupervised learning there is **no feedback based on the prediction results**.
+With unsupervised learning there is **no feedback based on the prediction results**.
 	
-	- Example:
-		- Clustering: Take a collection of 1,000,000 different genes, and find a way to automatically group these genes into groups that are somehow similar or related by different variables, such as lifespan, location, roles, and so on.
-		- Non-clustering: The "Cocktail Party Algorithm", allows you to find structure in a chaotic environment. (i.e. identifying individual voices and music from a mesh of sounds at a cocktail party).
+- Example:
+	- Clustering: Take a collection of 1,000,000 different genes, and find a way to automatically group these genes into groups that are somehow similar or related by different variables, such as lifespan, location, roles, and so on.
+	- Non-clustering: The "Cocktail Party Algorithm", allows you to find structure in a chaotic environment. (i.e. identifying individual voices and music from a mesh of sounds at a cocktail party).
 
 # linear regression with one variable
- 
+
 - $x^{(i)}$ denote the "input" varialbes(**input features**)
 - $y^{(i)}$ denote the "output varialbes"(**target variables**)
 - m denote numbers of the traning examples 
@@ -80,16 +80,16 @@ outline:
 
 ### gradient descent algorithm
  repeat untill convergence{
- 
+
  $\theta_{j} := \theta_{j} - \alpha \frac{\partial}{\partial\theta_j}J(\theta_0,\theta_{1}))$  (for j =0 and j=1)
- 
+
  }
- 
+
  - **$\alpha$** : learning rate
- 	- a=0 do not work
- 	- a is very small,it will be too slow
- 	- a is very large,it will fail to convergence
- 	
+		- a=0 do not work
+		- a is very small,it will be too slow
+		- a is very large,it will fail to convergence
+	
  - **simultaneous update** $\theta_0 , \theta_1$
 
 $\begin{align*} \text{repeat until convergence: } \lbrace & \newline \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \newline \rbrace& \end{align*}$
@@ -103,18 +103,18 @@ $\alpha\frac{1}{m}\sum\limits_{i=1}^{m}((h_\theta(x_{i}) - y_{i}) x_{i})$
 
 $\alpha \frac{\partial}{\partial\theta_j}J(\theta_0,\theta_{1}))$ 
  => $\alpha\frac{\partial}{\partial\theta_j}\frac{1}{2m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)}-y^{(i)})^2$
- 
+
  same as:
- 
- 
+
+
 $\frac{\partial}{\partial\theta_j}J(\theta_0,\theta_{1}))$ 
  => $\frac{\partial}{\partial\theta_j}\frac{1}{2m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)}-y^{(i)})^2$
  =>$\frac{1}{m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)}-y^{(i)})^{2}x_j^{(i)}）$
- 
+
  when $\theta=0$.   $x_0^i$ =1
-  
+
  > 此处证明过程略，**别忘了把学习速率a补上**
- 
+
 ## Matrices and Vectors
 
 ### Scalar
@@ -143,7 +143,7 @@ $$
    4 \\
    7 
   \end{bmatrix}
- $$
+$$
 
 - denote by lowercase
 - m*1 

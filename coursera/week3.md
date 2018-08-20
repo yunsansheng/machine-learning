@@ -27,12 +27,12 @@ z代表的是之前的$\theta^T x$(线性函数)因此
 $\theta^T x \geq 0 \rightarrow y=1$
 
 $\theta^T x < 0 \rightarrow y=0$
- 
+
 Again, the input to the sigmoid function,**g(z) doesn't need to be linear**, and could be a function that describes a circle or any shape to fit our data.
 
 
 
-#logistic regression model
+# logistic regression model
 
 ## cost function
 
@@ -52,7 +52,7 @@ $J(\theta_0,\theta_{1}) = \frac{1}{2m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)}-y^{
 
 $\begin{align*}& \mathrm{Cost}(h_\theta(x),y) = 0 \text{ if } h_\theta(x) = y \newline & \mathrm{Cost}(h_\theta(x),y) \rightarrow \infty \text{ if } y = 0 \; \mathrm{and} \; h_\theta(x) \rightarrow 1 \newline & \mathrm{Cost}(h_\theta(x),y) \rightarrow \infty \text{ if } y = 1 \; \mathrm{and} \; h_\theta(x) \rightarrow 0 \newline \end{align*}$
 
-##simplified cost function
+## simplified cost function
 
 单个的代价函数
 
@@ -167,7 +167,7 @@ we can also represent $\theta_j$ as :
 
 $\theta_j := \theta_j(1-\alpha \frac{\lambda}{m})- \alpha\frac{1}{m} \sum\limits^m_{i=1}(h_\theta(x^{(i)})-y^{(i)}) x_j^{(i)}$
 
-- 1−αmλ will always be less than 1.
+- $1−α\frac{λ}{m}$ will always be less than 1.
 
 - otice that the second term is now exactly the same as it was before
 
@@ -189,11 +189,11 @@ $\theta_j := \theta_j(1-\alpha \frac{\lambda}{m})- \alpha\frac{1}{m} \sum\limits
 
 Recall that our cost function for logistic regression was:
 
-J(\theta) =- \frac{1}{m}\sum\limits ^m_{i=1}[y^{(i)}log(h_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]
+$J(\theta) =- \frac{1}{m}\sum\limits ^m_{i=1}[y^{(i)}log(h_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]$
 
 we can regularize the equation by adding a term to the end:
 
-J(\theta) =- \frac{1}{m}\sum\limits ^m_{i=1}[y^{(i)}log(h_\theta(x^{(i)}))+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]+\frac{\lambda}{2m}\sum\limits^n_{j=1}\theta^2_j
+$J(\theta) =- \frac{1}{m}\sum\limits ^m_{i=1}[y^{(i)}log(h_\theta(x^{(i)}))+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]+\frac{\lambda}{2m}\sum\limits^n_{j=1}\theta^2_j$
 
 - not include $\theta_0$
 

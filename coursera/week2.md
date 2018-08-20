@@ -40,7 +40,7 @@ $\begin{align*} & \text{repeat until convergence:} \; \lbrace \newline \; & \the
 - mean normalizaiton
 	- $x_i := \frac{x_i -u_i}{s_i}$ 
 	- $u_i$ :average ,$s_i$: max - min
-	- $-0.5 \leq x_i\leq 0.5$ or  $0\leq x_i\leq 0.5$
+	- $-0.5 \leq x_i\leq 0.5$ 
 	
 
 ### learning reate
@@ -93,14 +93,14 @@ function in octave
 2. 文件名，必须和函数名一致
 3. 单返回值函数
 
-```
+```octave
 function y = test(x)
 y = x ^ 2
 ```
 
 4. 多返回值函数
 
-```
+```octave
 function [y1, y2 ] = test(x)
 y1 = x ^ 2
 y2 = x^3
