@@ -64,7 +64,7 @@ x from $x^{(i)}$
 target: choose $\theta_0,\theta_{1}$ so that  $h_{\theta}(x)$ is close to y for our tranning examples(x,y)
 
 ## cost function
-$J(\theta_0,\theta_{1}) = \frac{1}{2m}\sum\limits_{i=1}^m(h_{\theta}(x^{(i)}-y^{(i)})^2$ 
+$J(\theta_0,\theta_{1}) = \frac{1}{2m}\sum\limits_{i=1}^m(h_{\theta}(x_{(i)})-y_{(i)})^2$ 
 
 goal: make $J(\theta_0,\theta_{1})$ minimize
 
